@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en/fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de tâches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- en-tête -->
+    <header	class="entete">
+     <h1>Gestionnaire de tâches</h1>
+    </header>
+    
+    <!-- contenue -->
+    <main>
+      <section	class="rangee-kpi">
+        <div class="carte-kpi">
+         <span	id="kpi-total">0</span><p>Total</p>
+        </div>
+         <div	class="carte-kpi"><span	id="kpi-terminees">3</span><p>Terminées</p></div>
+         <div	class="carte-kpi">
+           <span	id="kpi-taux">100%</span><p>Taux	de	complétion</p>
+         <div	class="barre-progression"><div	id="barre-remplie"	class="barre-remplie"></div></div>
+        </div>
+    </section>
+
+
+    <div	class="barre-filtres">
+     <button	class="filtre"	data-filtre="toutes">Toutes</button>
+    <button	class="filtre"	data-filtre="encours">En	cours</button>
+   <button	class="filtre"	data-filtre="terminees">Terminées</button>
+     </div>
+     <section	id="sortie"	class="liste-taches"></section>
+   </main>
+
+   <footer	class="pied">
+     <p>Akieni	Academy	—	Cohorte	2	—	2026</p>
+   </footer>
+
+   <script src="taches.js"></script>
+</body>
+</html>

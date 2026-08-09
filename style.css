@@ -1,0 +1,22 @@
+:root	{	--vert:#10b981;	--rouge:#ef4444;	--orange:#f59e0b;	--fond:#f9fafb;	--rayon:12px;	}
+*	{	box-sizing:	border-box;	margin:	0;	padding:	0;	}
+body	{	font-family:	system-ui,	sans-serif;	background:	var(--fond);	color:	#1f2937;	padding:	1rem;	}
+.entete	{	text-align:	center;	margin-bottom:	1.5rem;	}
+.rangee-kpi	{	display:	grid;	grid-template-columns:	1fr;	gap:	1rem;	max-width:	700px;	margin:	0	auto	1.5rem	auto;	}
+@media	(min-width:	700px)	{	.rangee-kpi	{	grid-template-columns:	repeat(3,	1fr);	}	}
+.carte-kpi	{	background:	white;	border-radius:	var(--rayon);	padding:	1rem;	text-align:	center;	box-shadow:	0	1px	3px	rgba(0,0,0,.08);	}
+.carte-kpi	span	{	font-size:	1.8rem;	font-weight:	800;	color:	var(--vert);	}
+.barre-progression	{	height:	8px;	background:	#e5e7eb;	border-radius:	999px;	margin-top:	.5rem;	overflow:	hidden;	}
+.barre-remplie	{	height:	100%;	background:	var(--vert);	width:	0%;	transition:	width	.3s;	}
+.barre-filtres	{	display:	flex;	justify-content:	center;	gap:	.5rem;	margin-bottom:	1rem;	}
+.filtre	{	padding:	.4rem	1rem;	border:	1px	solid	var(--vert);	color:	var(--vert);	background:	white;	border-radius:	999px;	cursor:	pointer;	}
+.filtre.actif	{	background:	var(--vert);	color:	white;	}
+.liste-taches	{	display:	flex;	flex-direction:	column;	gap:	.6rem;	max-width:	700px;	margin:	0	auto;	}
+.tache	{	display:	flex;	align-items:	center;	justify-content:	space-between;	background:	white;	border-radius:	8px;	padding:	.75rem	1rem;	box-shadow:	
+0	1px	3px	rgba(0,0,0,.08);	border-left:	4px	solid	transparent;	}
+.priorite-haute	{	border-color:	var(--rouge);	}
+.priorite-moyenne	{	border-color:	var(--orange);	}
+.priorite-basse	{	border-color:	var(--vert);	}
+.tache.terminee	.titre-tache	{	text-decoration:	line-through;	opacity:	.55;	}
+.actions-tache	button	{	border:	none;	background:	none;	cursor:	pointer;	font-size:	.9rem;	margin-left:	.5rem;	}
+.pied p{ text-align: center; margin-top: 30px; }
