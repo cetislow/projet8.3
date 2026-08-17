@@ -1,44 +1,73 @@
 <!DOCTYPE html>
-<html lang="en/fr">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestionnaire de tâches</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- en-tête -->
-    <header	class="entete">
-     <h1>Gestionnaire de tâches</h1>
+    <!-- En-tête -->
+    <header class="entete">
+        <h1>Gestionnaire de tâches</h1>
+        <p>Projet 8.3 - Semaine 8</p>
     </header>
-    
-    <!-- contenue -->
+
     <main>
-      <section	class="rangee-kpi">
-        <div class="carte-kpi">
-         <span	id="kpi-total">0</span><p>Total</p>
-        </div>
-         <div	class="carte-kpi"><span	id="kpi-terminees">3</span><p>Terminées</p></div>
-         <div	class="carte-kpi">
-           <span	id="kpi-taux">100%</span><p>Taux	de	complétion</p>
-         <div	class="barre-progression"><div	id="barre-remplie"	class="barre-remplie"></div></div>
-        </div>
-    </section>
 
+        <!-- Tableau de bord -->
+        <section class="kpi">
 
-    <div	class="barre-filtres">
-     <button	class="filtre"	data-filtre="toutes">Toutes</button>
-    <button	class="filtre"	data-filtre="encours">En	cours</button>
-   <button	class="filtre"	data-filtre="terminees">Terminées</button>
-     </div>
-     <section	id="sortie"	class="liste-taches"></section>
-   </main>
+            <article class="carte-kpi">
+                <h2>Total</h2>
+                <p id="total">0</p>
+            </article>
 
-   <footer	class="pied">
-     <p>Akieni	Academy	—	Cohorte	2	—	2026</p>
-   </footer>
+            <article class="carte-kpi">
+                <h2>Terminées</h2>
+                <p id="terminees">0</p>
+            </article>
 
-   <script src="taches.js"></script>
+            <article class="carte-kpi">
+                <h2>Complétion</h2>
+                <p id="taux">0%</p>
+
+                <div class="barre">
+                    <div id="progression" class="progression"></div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Barre de filtres -->
+        <section class="filtres">
+
+            <button>Toutes</button>
+            <button>En cours</button>
+            <button>Terminées</button>
+
+        </section>
+
+        <!-- Liste des tâches -->
+        <section class="liste">
+
+            <h2>Mes tâches</h2>
+
+            <div id="sortie">
+                <!-- Le JavaScript affichera les tâches ici -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Akieni Academy - Cohorte 2 - 2026</p>
+    </footer>
+
+    <script src="taches.js"></script>
+
 </body>
 </html>
